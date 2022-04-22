@@ -19,6 +19,19 @@ export class AppComponent {
 // Example 3:
 // Input: nums = [3,3], target = 6
 // Output: [0,1]
+
+// Below answer failed one test case
+
+// function twoSum(nums: number[], target: number): number[] {
+//   let arr = [];
+//   nums.forEach((element, index) => {
+//     element + nums[index + 1] === target ? (arr = [index, index + 1]) : [];
+//   });
+//   return arr;
+// }
+
+// Updated answer
+
 function twoSum(nums: number[], target: number): number[] {
   let arr = [];
   nums.forEach((element, index) => {

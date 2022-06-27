@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { twoSum } from './twoSum';
 
 @Component({
   selector: 'my-app',
@@ -7,18 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   constructor() {
-    console.log(isPalindrome(121));
+    // console.log(isPalindrome(121));
+    console.log(twoSum([1, -2, 3, 4, 5], 5));
   }
-}
-
-// Two Sum
-
-function twoSum(nums: number[], target: number): number[] {
-  let arr = [];
-  nums.forEach((element, index) => {
-    element + nums[index + 1] === target ? (arr = [index, index + 1]) : [];
-  });
-  return arr;
 }
 
 
@@ -38,9 +30,6 @@ function isPalindrome(x: number): boolean {
       }
     }
     return count == reverseArray.length ? true : false;
-  } 
-    return false;
-  
+  }
+  return false;
 }
-
-

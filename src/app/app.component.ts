@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { isPalindrome } from './palindrome';
+import { removeDuplicates } from './removeDuplicatesFromSortedArray';
 import { twoSum } from './twoSum';
 import { isValid } from './validParanthesis';
 
@@ -13,6 +14,7 @@ export class AppComponent {
     console.log(isPalindrome(1001));
     console.log(twoSum([1, -2, 3, 4, 5], 5));
     console.log(isValid('()'));
+    console.log(removeDuplicates([1,1,2]))
   }
   
 }

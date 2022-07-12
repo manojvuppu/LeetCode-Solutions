@@ -70,5 +70,43 @@ GOOD LUCK 😀
 
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    //1
+    for (const [goalNumber, playerName] of this.game.scored.entries()) {
+      console.log(`Goal ${goalNumber + 1}: ${playerName}`);
+    }
+
+    //2
+
+    const odds = Object.values(this.game.odds);
+    console.log(odds);
+
+    let avg = 0;
+
+    for (const odd of odds) avg += odd;
+    avg /= odds.length;
+    console.log(avg);
+
+    //3
+
+    for (const [teamName, odds] of Object.entries(this.game.odds)) {
+      // console.log(teamName,odds);
+
+      const str =
+        teamName == 'x'
+          ? ' Odd of draw:'
+          : `Odd of victory ${this.game[teamName]}:`;
+      console.log(`${str} ${odds}`);
+    }
+
+    //4
+
+    const scorers = {};
+
+    for (const scorer of this.game.scored) {
+     scorers[scorer]?scorers[scorer]++:scorers[scorer]=1
+    }
+
+    console.log(scorers);
+  }
 }

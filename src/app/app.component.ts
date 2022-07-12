@@ -11,12 +11,12 @@ import { isValid } from './validParanthesis';
 })
 export class AppComponent {
   constructor() {
-    console.log(isPalindrome(1001));
-    console.log(
-      'isPalindromeUsingTwoPointer ' + isPalindromeUsingTwoPointer(101)
-    );
-    console.log(twoSum([1, -2, 3, 4, 5], 5));
-    console.log(isValid('()'));
-    console.log(removeDuplicates([1, 1, 2]));
+    // console.log(isPalindrome(1001));
+    // console.log(
+    //   'isPalindromeUsingTwoPointer ' + isPalindromeUsingTwoPointer(101)
+    // );
+    // console.log(twoSum([1, -2, 3, 4, 5], 5));
+    // console.log(isValid('()'));
+    // console.log(removeDuplicates([1, 1, 2]));
   }
 }

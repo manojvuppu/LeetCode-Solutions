@@ -71,3 +71,36 @@ function pairElement(str:string) {
      }
     )
   }
+
+
+
+  // ************ Missing letters starts ************
+
+  function fearNotLetter(str) {
+    const format = "abcdefghijklmnopqrstuvwxyz";
+    let min;
+    let max;
+    let exp
+  
+    min = format.indexOf(str.split("")[0]);
+    max = format.indexOf(str.split("")[str.length -1]);
+    exp = format.slice(min,max+1)
+  
+  
+    const [man] = exp.split("").filter(
+      strl => str.indexOf(strl) < 0
+    )
+    return man;
+  }
+
+  // tweaked solution one liner
+
+function fearNotLetterOneLiner(str) {
+  
+  const [man] = 'abcdefghijklmnopqrstuvwxyz'.slice('abcdefghijklmnopqrstuvwxyz'.indexOf(str.split("")[0]),'abcdefghijklmnopqrstuvwxyz'.indexOf(str.split("")[str.length -1])+1).split("").filter(
+    strl => str.indexOf(strl) < 0
+  )
+  return man;
+}
+
+   // ************ Missing Letters Ends ************

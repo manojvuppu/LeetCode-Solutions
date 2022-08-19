@@ -102,3 +102,19 @@ function fearNotLetterOneLiner(str) {
 function uniteUnique(...arr) {
   return [...new Set(arr.reduce((acc, val) => acc.concat(val), []))];
 }
+
+function convertHTML(str) {
+  const htmlEntities = {
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    '"': "&quot;",
+    "'": "&apos;"
+  }
+  return str.split("").map(
+    strin => htmlEntities[strin] || strin
+  ).join("");
+}
+
+
+

@@ -42,3 +42,13 @@ export function translatePigLatin(str:string){
   )
   return addedVal ? str= str +"ay":str =str+"way"
 }
+
+
+// Search and Replace
+
+myReplace(sentence, string1, string2) {
+  return sentence
+    .split(' ')
+    .map((str) => (str === string1 ? (str = string2) : str))
+    .join(' ');
+}

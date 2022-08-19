@@ -46,9 +46,28 @@ export function translatePigLatin(str:string){
 
 // Search and Replace
 
-myReplace(sentence, string1, string2) {
+function myReplace(sentence, string1, string2) {
   return sentence
     .split(' ')
     .map((str) => (str === string1 ? (str = string2) : str))
     .join(' ');
 }
+
+
+// DNA Pairing
+
+function pairElement(str:string) {
+  return str.split("").map(
+    letter => {
+      if(letter === 'A'){
+        return ["A","T"]
+      }else if (letter === 'T'){
+       return ["T","A"]
+      }else if (letter === 'C'){
+       return ["C","G"]
+      }else if (letter === 'G'){
+       return ["G","C"]
+      }
+     }
+    )
+  }

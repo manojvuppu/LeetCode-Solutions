@@ -135,3 +135,33 @@ function sumFibs(num) {
 
   return result;
 }
+
+
+// ************ Sum All Prime Numbers ************
+
+
+  // Helper function to check primality
+  function isPrime(num) {
+    if(num<2) return false
+    for (let i = 2; i <= Math.sqrt(num); i++) {
+      if (num % i == 0)
+        return false;
+    }
+    return true;
+  }
+
+  function sumOfAllPrimes(num:number){
+   return Array.from({length:num}, (_,v) => v+1).filter(i => isPrime(i)).reduce((a,b)=> a+b,0)
+
+  }
+
+  function sumPrimes(num) {
+    // Check all numbers for primality
+      let sum = 0;
+      for (let i = 2; i <= num; i++) {
+        if (isPrime(i))
+          sum += i;
+      }
+      return sum;
+  }
+  

@@ -165,3 +165,20 @@ function sumFibs(num) {
       return sum;
   }
   
+
+  // ************ Flatten Array To Infinite level************
+  
+  function steamrollArray(arr:any[]) {
+    const flatArr = []
+    arr.forEach((item)=>{
+      if(Array.isArray(item)){
+  
+        flatArr.push(...steamrollArray(item))
+  
+      }else{
+        flatArr.push(item)
+      }
+    })
+    return  flatArr
+  }
+  
